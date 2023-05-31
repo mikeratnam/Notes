@@ -1,0 +1,9 @@
+The __name__ variable in the Flask application setup is used to determine the root path or the name of the current module. It helps Flask locate resources such as templates, static files, and other related files.
+
+When you run a Python module directly as the main program (for example, python app.py), its __name__ attribute is set to "__main__". On the other hand, when a module is imported by another module, its __name__ attribute is set to the name of the module itself.
+
+In the case of Flask, providing __name__ as the argument when creating the Flask application instance helps Flask to understand the root path or location of your application, which is necessary for it to find the associated files and resources correctly.
+
+By using __name__ in this context, Flask can determine the proper location of static files, templates, and other resources relative to the current module or package. It ensures that Flask can properly serve those files when requested by the client or when rendering templates within your application.
+
+In summary, __name__ is used to provide Flask with the necessary context to locate resources and handle requests correctly, depending on whether the module is being run directly or imported by another module.
